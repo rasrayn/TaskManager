@@ -19,21 +19,21 @@ def main():
     while True:
         
         printMenu()
-        choice = input("Elige una opción: ")
+        choice = int(input("Elige una opción: "))
 
         match choice:
-            case "1":
+            case 1:
                 description = input("Describa la tarea: ")
                 manager.add_task(description)
-            case "2":
+            case 2:
                 manager.list_task()
-            case "3":
-                id = input("ID de la tarea a completar: ")
+            case 3:
+                id = int(input("ID de la tarea a completar: "))
                 manager.complete_task(id)
-            case "4":
-                id = input ("ID de la tarea a eliminar: ")
+            case 4:
+                id = int(input ("ID de la tarea a eliminar: "))
                 manager.delete_task(id)
-            case "5":
+            case 5:
                 print("Saliendo")
                 break     
             case _: #en python este es igual que el default en js
