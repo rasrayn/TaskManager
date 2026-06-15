@@ -35,7 +35,7 @@ def main():
                     #al añadir la tarea llamamos al manager y añadimos la tarea si no tenemos Error
                     for subtask in subtasks:
                         if not subtask.startswith("Error:"):
-                            manager.add_task(subtask)
+                            manager.add_task(subtask)#si no hay error añadimos la subtarea al gestor de tareas, si hay un error lo mostramos y no añadimos nada.
                         else:
                             print(subtask)
                             break # para no seguir realizando el for ya que si hay un error no tiene sentido buscar mas subtareas

@@ -33,7 +33,6 @@ def create_simple_tasks(description):
             "model" : "gpt-5", #indicamos modelo gpt
             "messages": [ #indicamos el role y contexto a chat gpt
                 {"role": "system", "content": "Eres un asistente experto en gestión de tareas que ayuda a dividir tareas complejas en pasos simples y accionables"},
-                
                 {"role": "user", "content": prompt},
             ],
             #mas parametros a gpt como el máximo de tokens a gastar, la verbosidad en la contestación o el razonamiento y lo que va a tardar en contestar.
@@ -59,4 +58,4 @@ def create_simple_tasks(description):
         return subtasks if subtasks else ("Error:No se han podido generar las subtareas.")
         
     except Exception:
-        return ("Error: No se ha podido realizar la conexión a OpenAI")
+        return ("Error: No se ha podido realizar la conexión a OpenAI")#si hay un error en la conexión a open ai, se devuelve este mensaje de error.
